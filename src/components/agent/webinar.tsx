@@ -25,6 +25,9 @@ export function Webinar() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="flex "
+            onClick={() => {
+              window.open("https://forms.gle/W7AEVzv7WmZZiEGV8", "_blank");
+            }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-[#090857] bg-white px-4 py-2 text-sm font-medium text-[#090857] shadow-sm">
               <Video className="size-4 text-[#090857]" />
@@ -70,7 +73,7 @@ export function Webinar() {
               className="w-full bg-[#090857] text-white hover:bg-white hover:text-[#090857] transition-all"
               asChild
             >
-              <Link href="#link">
+              <Link href="https://forms.gle/W7AEVzv7WmZZiEGV8" target="_blank">
                 <span>Register for free</span>
                 <ChevronRight className="ml-1" />
               </Link>

@@ -25,7 +25,7 @@ import Link from "next/link";
 
 export function HowToMakeMoney() {
   return (
-    <section className="py-16 md:py-32">
+    <section className="pb-16 pt-10">
       <div className="mx-auto max-w-5xl px-6">
         <div className="mx-auto max-w-2xl space-y-6 text-center">
           <h1 className="text-center text-4xl font-semibold lg:text-5xl">
@@ -77,7 +77,12 @@ export function HowToMakeMoney() {
                   variant="outline"
                   className="w-full bg-transparent text-white hover:bg-white hover:text-[#090857] transition-all"
                 >
-                  <Link href="">Get Started</Link>
+                  <Link
+                    href="https://forms.gle/W7AEVzv7WmZZiEGV8"
+                    target="_blank"
+                  >
+                    Get Started
+                  </Link>
                 </Button>
               </div>
 

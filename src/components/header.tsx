@@ -6,6 +6,7 @@ import React from "react";
 import { useScroll, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
+import { usePathname } from "next/navigation";
 
 const menuItems: { name: string; href: string }[] = [
   // { name: "Features", href: "#link" },
@@ -18,7 +19,7 @@ export const Header = () => {
   const [menuState, setMenuState] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const { scrollYProgress } = useScroll();
-
+  const pathname = usePathname();
   React.useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
       setScrolled(latest > 0.05);
@@ -35,14 +36,14 @@ export const Header = () => {
         <div
           className={cn(
             "mx-auto max-w-7xl rounded-3xl px-6 transition-all duration-300 lg:px-12",
-            scrolled && "bg-background/50 backdrop-blur-2xl",
+            scrolled && "bg-background/50 backdrop-blur-2xl"
           )}
         >
           <motion.div
             key={1}
             className={cn(
               "relative flex flex-wrap items-center justify-between gap-6 py-3 duration-200 lg:gap-0 lg:py-3",
-              scrolled && "lg:py-4",
+              scrolled && "lg:py-4"
             )}
           >
             <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
@@ -100,8 +101,14 @@ export const Header = () => {
                   size="lg"
                   className="bg-[#090857] text-white min-w-40"
                 >
-                  <Link href="#">
-                    <span>Get Listed</span>
+                  <Link
+                    href={
+                      pathname === "/agent"
+                        ? "https://forms.gle/W7AEVzv7WmZZiEGV8"
+                        : "https://forms.gle/HVhxJ8V9UTmgzLRv6"
+                    }
+                  >
+                    <span>Get Started</span>
                   </Link>
                 </Button>
               </div>

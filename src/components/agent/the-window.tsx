@@ -5,7 +5,7 @@ import { Logo } from "../logo";
 export function TheWindow() {
   return (
     <section>
-      <div className="bg-background py-24 md:py-32">
+      <div className="bg-background py-24">
         <div className="mx-auto flex flex-col px-6 md:grid md:max-w-5xl md:grid-cols-2 md:gap-12">
           <div className="order-last mt-6 flex flex-col gap-12 md:order-first">
             <div className="space-y-6">

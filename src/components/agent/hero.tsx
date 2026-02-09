@@ -52,7 +52,7 @@ export const Hero: React.FC<HeroProps> = ({
     <section
       className={cn(
         "relative w-full h-screen overflow-hidden bg-background flex flex-col items-center justify-center text-center px-4",
-        className,
+        className
       )}
     >
       <div className="z-10 flex flex-col items-center">
@@ -62,6 +62,9 @@ export const Hero: React.FC<HeroProps> = ({
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS as Variants}
           className="mb-4 inline-block rounded-full border border-[#090857] bg-card/50 px-4 py-1.5 text-sm font-medium text-[#090857] backdrop-blur-sm"
+          onClick={() => {
+            window.open("https://forms.gle/W7AEVzv7WmZZiEGV8", "_blank");
+          }}
         >
           {tagline}
         </motion.div>

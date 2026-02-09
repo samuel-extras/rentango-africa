@@ -10,8 +10,13 @@ export function ThePicture() {
         <div className=" mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10">
           {/* Announcement Banner */}
           <div className="flex justify-center">
-            <p className="inline-flex items-center gap-x-2 bg-violet-100 border border-[#090857] text-xs text-[#090857] p-2 px-3 rounded-full transition hover:border-line-3 focus:outline-hidden focus:border-line-3">
-              No capital. No property. Just access.{" "}
+            <p
+              className="inline-flex items-center gap-x-2 bg-violet-100 border border-[#090857] text-xs text-[#090857] p-2 px-3 rounded-full transition hover:border-line-3 focus:outline-hidden focus:border-line-3"
+              onClick={() => {
+                window.open("https://forms.gle/W7AEVzv7WmZZiEGV8", "_blank");
+              }}
+            >
+              Earn From Shortlet
             </p>
           </div>
           {/* End Announcement Banner */}
@@ -19,7 +24,7 @@ export function ThePicture() {
           {/* Title */}
           <div className="mt-5 max-w-xl text-center mx-auto">
             <h1 className="block text-4xl font-medium lg:text-5xl text-foreground">
-              Paint the picture{" "}
+              No capital. No property. Just access.
             </h1>
           </div>
           {/* End Title */}

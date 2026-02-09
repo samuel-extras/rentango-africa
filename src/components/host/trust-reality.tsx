@@ -1,6 +1,8 @@
 "use client";
 
 import { MapPin, Sparkles } from "lucide-react";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 const LOCATIONS = ["Lekki", "Ikoyi", "Victoria Island", "Abuja"];
 
@@ -57,12 +59,18 @@ export function TrustReality() {
             </div>
             {/* End Title */}
 
-            <div className="inline-flex items-center gap-2 rounded-2xl bg-[#090857] px-6 py-4 text-white shadow-lg shadow-stone-900/20">
-              <Sparkles className="size-5 shrink-0 text-white" aria-hidden />
-              <span className="text-lg font-semibold md:text-xl">
-                Rentango fixes that.
-              </span>
-            </div>
+            <Button
+              size="lg"
+              className="inline-flex items-center gap-2 rounded-2xl bg-[#090857] px-6 py-4 text-white shadow-lg shadow-stone-900/20 h-14 "
+              asChild
+            >
+              <Link href="https://forms.gle/HVhxJ8V9UTmgzLRv6" target="_blank">
+                <Sparkles className="size-5 shrink-0 text-white" aria-hidden />
+                <span className="text-lg font-semibold md:text-xl">
+                  Rentango fixes that.
+                </span>
+              </Link>
+            </Button>
           </div>
         </div>
         {/* End Col */}
