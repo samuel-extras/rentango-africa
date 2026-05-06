@@ -1,83 +1,60 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { ArrowRight, PhoneCall } from "lucide-react";
 
 export function CallToAction() {
   return (
-    <div className="max-w-7xl py-16 md:w-full mx-2 md:mx-auto flex flex-col items-center justify-center text-center bg-linear-to-b from-[#090857] to-[#090857] rounded-2xl p-10 text-white">
-      <div className="flex flex-wrap items-center justify-center p-1 rounded-full bg-purple-600/10 backdrop-blur border border-purple-500/40 text-sm px-2.5">
-        <p className=" font-medium">
+    <section className="py-16 px-4 md:px-6">
+      <div className="mx-auto max-w-5xl rounded-3xl bg-[#04032e] px-8 py-16 text-center md:px-16 relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 size-96 rounded-full bg-purple-600/20 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 size-96 rounded-full bg-indigo-600/20 blur-3xl pointer-events-none" />
+
+        {/* Badge */}
+        <div className="relative inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/80 mb-6">
+          <span className="size-2 rounded-full bg-emerald-400" />
           No pressure. No obligation. Just clarity.
+        </div>
+
+        {/* Heading */}
+        <h2 className="relative text-4xl font-bold text-white md:text-5xl md:leading-tight max-w-2xl mx-auto">
+          Let's see if your apartment{" "}
+          <span className="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">
+            qualifies.
+          </span>
+        </h2>
+
+        <p className="relative mt-4 text-lg text-white/60 max-w-lg mx-auto">
+          Start the 2-minute assessment and find out how much your apartment could
+          earn every month.
         </p>
+
+        {/* Buttons */}
+        <div className="relative mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button
+            size="lg"
+            className="h-14 rounded-full bg-white px-8 text-base font-semibold text-[#090857] hover:bg-white/90 transition-all group"
+            asChild
+          >
+            <Link href="https://forms.gle/wWc836jQhK7s7BB68" target="_blank">
+              Start Getting Bookings
+              <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+
+          <Button
+            size="lg"
+            variant="outline"
+            className="h-14 rounded-full border-white/30 bg-white/5 px-8 text-base font-semibold text-white hover:bg-white/10 transition-all"
+            asChild
+          >
+            <Link href="https://forms.gle/wWc836jQhK7s7BB68" target="_blank">
+              <PhoneCall className="mr-2 size-5" />
+              Book a Clarity Call
+            </Link>
+          </Button>
+        </div>
       </div>
-      <h1 className="text-4xl md:text-5xl md:leading-[60px] font-semibold max-w-xl mt-5 bg-linear-to-r from-white to-[#CAABFF] text-transparent bg-clip-text">
-        Let’s see if your apartment qualifies.
-      </h1>
-      <div className="flex flex-col items-center justify-center gap-2 sm:flex-row ">
-        <Button
-          size="lg"
-          className="px-8 py-3 text-white bg-[#090857] hover:bg-white transition-all rounded-full uppercase text-sm mt-8 cursor-pointer"
-          variant="outline"
-          asChild
-        >
-          <Link href="https://forms.gle/HVhxJ8V9UTmgzLRv6" target="_blank">
-            Start the assessment
-          </Link>
-        </Button>
-        <Button
-          size="lg"
-          className="px-8 py-3 text-[#090857] bg-white hover:bg-white/80 transition-all rounded-full uppercase text-sm mt-8 cursor-pointer"
-          asChild
-        >
-          <Link href="https://forms.gle/HVhxJ8V9UTmgzLRv6" target="_blank">
-            Book a clarity call
-          </Link>
-        </Button>
-      </div>
-    </div>
+    </section>
   );
 }
-
-<div className="bg-background">
-  {/* Approach */}
-  <div className="max-w-7xl px-4 xl:px-8 py-10  mx-auto bg-[#090857] rounded-3xl space-y-6">
-    <h2 className="font-semibold text-2xl text-white md:text-3xl md:leading-tight">
-      HOW IT WORKS
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-4">
-      <div className="bg-white rounded-xl p-6 space-y-2.5">
-        <div className="flex items-center gap-2 bg-[#bfc0d3] rounded-md py-1.5 px-2.5 w-fit">
-          <p className="text-sm text-black"> Step 1</p>
-        </div>
-        <h3 className="font-semibold text-base text-foreground">
-          Quick Assessment (2 minutes)
-        </h3>
-        <p className=" text-foreground">
-          Tell us about your apartment location, size, and availability.
-        </p>
-      </div>
-      <div className="bg-white rounded-xl p-6 space-y-2.5">
-        <div className="flex items-center gap-2 bg-[#bfc0d3] rounded-md py-1.5 px-2.5 w-fit">
-          <p className="text-sm text-black"> Step 2</p>
-        </div>
-        <h3 className="font-semibold text-base text-foreground">
-          Clarity Call (15 minutes)
-        </h3>
-        <p className=" text-foreground">
-          We review if your apartment fits shortlet demand and earning
-          potential.
-        </p>
-      </div>
-      <div className="bg-white rounded-xl p-6 space-y-2.5">
-        <div className="flex items-center gap-2 bg-[#bfc0d3] rounded-md py-1.5 px-2.5 w-fit">
-          <p className="text-sm text-black"> Step 3</p>
-        </div>
-        <h3 className="font-semibold text-base text-foreground">
-          Get Listed & Start Earning
-        </h3>
-        <p className=" text-foreground">
-          If approved, your apartment goes live and starts receiving bookings.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>;
