@@ -105,7 +105,7 @@ export const Header = () => {
                     href={
                       pathname === "/agent"
                         ? "https://forms.gle/W7AEVzv7WmZZiEGV8"
-                        : "https://forms.gle/HVhxJ8V9UTmgzLRv6"
+                        : "https://forms.gle/wWc836jQhK7s7BB68"
                     }
                   >
                     <span>Get Started</span>
