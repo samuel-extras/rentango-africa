@@ -33,12 +33,12 @@ export const Hero = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="max-w-2xl">
             {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-sm">
+            {/* <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 backdrop-blur-sm">
               <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-sm font-medium text-white/90">
                 Now accepting apartments in Lagos & Abuja
               </span>
-            </div>
+            </div> */}
 
             {/* Headline */}
             <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
@@ -56,7 +56,10 @@ export const Hero = () => {
             {/* Trust points */}
             <ul className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-6">
               {TRUST_POINTS.map((point) => (
-                <li key={point} className="flex items-center gap-2 text-white/70 text-sm">
+                <li
+                  key={point}
+                  className="flex items-center gap-2 text-white/70 text-sm"
+                >
                   <CheckCircle className="size-4 shrink-0 text-emerald-400" />
                   {point}
                 </li>
@@ -70,7 +73,10 @@ export const Hero = () => {
                 size="lg"
                 className="h-14 rounded-full bg-white px-8 text-base font-semibold text-[#090857] shadow-lg shadow-black/30 hover:bg-white/90 transition-all group"
               >
-                <Link href="https://forms.gle/wWc836jQhK7s7BB68" target="_blank">
+                <Link
+                  href="https://forms.gle/wWc836jQhK7s7BB68"
+                  target="_blank"
+                >
                   Start Getting Bookings
                   <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
                 </Link>
